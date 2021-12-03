@@ -1,0 +1,16 @@
+@use "../setting/variables" as v;
+@use "../mixin/mixin" as m;
+
+.bl_mv {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 216);
+  &_img {
+    width: 100vw;
+    height: 100vh;
+    &__next {
+      display: none;
+    }
+  }
+}

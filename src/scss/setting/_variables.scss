@@ -1,0 +1,18 @@
+//変数
+
+//ブレイクポイント
+$breakPointList: 767px, 900px, 1200px;
+
+// メディアクエリ
+$breakpoints: (
+  'sm': 'screen and (max-width: #{nth($list: $breakPointList, $n: 1)})',
+  'md': 'screen and (max-width: #{nth($list: $breakPointList, $n: 2)})',
+  'lg': 'screen and (max-width: #{nth($list: $breakPointList, $n: 3)})',
+) !default;
+
+// 画像ディレクトリ
+$imgDir: './img/';
+
+// サイトカラー
+$first: #006a9b;
+$second: #e43d60;

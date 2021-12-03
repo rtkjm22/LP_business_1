@@ -1,0 +1,24 @@
+// すべてのページで読み込む
+
+@use './setting/variables';
+@use './setting/function';
+
+// 必要なmixin
+@use './mixin/mixin';
+
+// リセットcss + ベース
+@use './base/reset';
+@use './base/base';
+
+// モジュールファイル
+@use './module/header';
+@use './module/mv';
+@use './module/gnav';
+@use './module/main';
+@use './module/content';
+@use './module/side';
+@use './module/footer';
+@use './module/fnav';
+@use './module/share';
+// etc...
+

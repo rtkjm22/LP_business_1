@@ -1,0 +1,207 @@
+* {
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+}
+
+/* webkit specific styles */
+input[type=color]::-webkit-color-swatch {
+		border: none;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+		padding: 0;
+}
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+		font-weight: inherit;
+}
+
+body {
+		line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+		display: block;
+}
+
+nav ul {
+		list-style: none;
+}
+
+blockquote, q {
+		quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+		content: "";
+		content: none;
+}
+
+a {
+		margin: 0;
+		padding: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+		color: black;
+		text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+		background-color: #ff9;
+		color: #000;
+		text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+		background-color: #ff9;
+		color: #000;
+		font-style: italic;
+		font-weight: bold;
+}
+
+del {
+		text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+		border-bottom: 1px dotted;
+		cursor: help;
+}
+
+table {
+		border-collapse: collapse;
+		border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+		display: block;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid #cccccc;
+		margin: 1em 0;
+		padding: 0;
+}
+
+input, select {
+		vertical-align: middle;
+}
+
+input:focus {
+		outline: none;
+}
+
+ul, ol {
+		list-style-type: none;
+}
+
+*, *::before, *::after {
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+}
+
+body {
+		-webkit-text-size-adjust: 100%;
+		   -moz-text-size-adjust: 100%;
+		    -ms-text-size-adjust: 100%;
+		        text-size-adjust: 100%;
+}
+
+img {
+		max-width: 100%;
+		height: auto;
+		vertical-align: bottom;
+}
+
+body {
+		background-color: #4d4902;
+}
+
+a, p {
+		font-size: 14px;
+}
+
+a {
+		-webkit-transition: 0.25s;
+		transition: 0.25s;
+}
+
+.ly_header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+}
+
+.bl_headerNav {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		margin: 0 100px;
+		padding-top: 30px;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+}
+
+.bl_headerMenu_items {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+}
+.bl_headerMenu_item {
+		padding: 0 24px;
+}
+.bl_headerMenu_item a {
+		color: white;
+}
+.bl_headerMenu_item a:hover {
+		color: #006a9b;
+}
+
+.bl_mv {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		background-color: #ffffd8;
+}
+.bl_mv_img {
+		width: 100vw;
+		height: 100vh;
+}
+.bl_mv_img__next {
+		display: none;
+}
+/*# sourceMappingURL=style.css.map */
