@@ -1,10 +1,6 @@
 @use "../setting/variables" as v;
 @use "../mixin/mixin" as m;
 
-body {
-  background-color: #4d4902;
-}
-
 a, p {
   font-size: 14px;
 }
@@ -12,3 +8,4 @@ a, p {
 a {
   transition: .25s;
 }
+

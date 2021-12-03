@@ -1,0 +1,116 @@
+@use "../setting/variables" as v;
+@use "../setting/animation" as a;
+@use "../mixin/mixin" as m;
+
+.ly_main {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.ly_sec {
+  width: 100vw;
+  height: 120vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+// 2カラム
+.ly_sec__2col {
+  background-color: darkgreen;
+  z-index: 300;
+}
+
+// サービス
+.bl_service {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10% 10%;
+  &_img {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 5%;
+    img {
+      object-fit: cover;
+    }
+    &_mid {
+      margin-top: 10%;
+    }
+    &_btm {
+      margin-bottom: 20%;
+    }
+  }
+  &_cont {
+    background-color: antiquewhite;
+    width: 50%;
+    padding: 5%;
+    &_cat {
+      color: #cecece;
+      margin-bottom: 1.4em;
+    }
+    &_ttl {
+      margin-bottom: 2em;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+    &_txt {
+      margin-bottom: 6em;
+      line-height: 1.5rem;
+    }
+    &_btn {
+      position: relative;
+      display: block;
+      padding: 30px;
+      color: v.$first;
+      font-size: 1.1rem;
+      max-width: 300px;
+      text-align: center;
+      border: 1px solid v.$first;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: v.$first;
+        transition: .5s;
+      }
+      &::before {
+        top: 50%;
+        right: -20%;
+        width: 100px;
+        height: 1px;
+      }
+      &::after {
+        top: calc(44% - 1px);
+        right: calc(-20% - 1px);
+        width: 20px;
+        height: 1px;
+        transform: rotate(30deg);
+      }
+      &:hover {
+        opacity: .7;
+        transition: .5s;
+        &::before {
+          transform: translateX(20px);
+        }
+        &::after {
+          transform: translateX(20px) rotate(30deg);
+        }
+      }
+    }
+  }
+}
+
+// ニュース
+.bl_news {
+  background-color: #F1F5F9;
+  z-index: 200;
+}
+
+
+.bl_contact {
+  background-color: #F1F5F9;
+  z-index: 400;
+}

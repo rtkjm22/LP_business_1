@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 .bl_headerNav {
@@ -13,6 +14,20 @@
   margin: 0 100px;
   padding-top: 30px;
   justify-content: space-between;
+}
+
+.bl_headerImg {
+  width: 150px;
+  height: 70px;
+  > a {
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .bl_headerMenu {
