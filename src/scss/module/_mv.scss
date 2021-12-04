@@ -1,5 +1,6 @@
 @use "../setting/variables" as v;
 @use "../mixin/mixin" as m;
+@use "../setting/helper" as h;
 @forward "../setting/animation";
 
 .bl_mv {
@@ -12,7 +13,7 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
-    img, &__dark {
+    img {
       position: absolute;
       display: block;
       width: 100%;
@@ -26,17 +27,13 @@
       top: 0;
       left: 100%;
     }
-    &__dark {
-      top: 0;
-      left: 0;
-      background-color: #0000004d;
-    }
   }
   &_cont {
     position: absolute;
     top: 40%;
     left: 40%;
     transform: translate(-50%, -50%);
+    z-index: 10;
     &_ttl {
       color: white;
       font-size: 80px;

@@ -123,16 +123,3 @@ input:focus {
 ul, ol {
   list-style-type: none;
 }
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-body {
-  text-size-adjust: 100%;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
-}

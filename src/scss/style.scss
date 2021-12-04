@@ -3,6 +3,7 @@
 @use './setting/variables';
 @use './setting/animation';
 @use './setting/function';
+@use "./setting/helper";
 
 // 必要なmixin
 @use './mixin/mixin';

@@ -2,6 +2,9 @@
 @use "../setting/animation" as a;
 @use "../mixin/mixin" as m;
 
+/**
+* レイアウト関連 ****************************************************************************************************
+**/
 .ly_main {
   max-width: 100%;
   margin: 0 auto;
@@ -9,47 +12,83 @@
 
 .ly_sec {
   width: 100vw;
-  height: 120vh;
+  min-height: 120vh;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
 }
 
-// 2カラム
-.ly_sec__2col {
-  background-color: darkgreen;
-  z-index: 300;
+.ly_sec__half {
+  min-height: 60vh;
 }
 
-// サービス
+/*	2カラムレイアウト	*/
+.ly_sec__2col {
+  display: flex;
+  height: 60vh;
+  section {
+    width: 50%;
+    height: 100%;
+  }
+  a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &:hover > .hp_dark {
+      opacity: 0;
+    }
+  }
+}
+
+/**
+* ブロック関連 ****************************************************************************************************
+**/
+
+/*	2カラム	*/
+.bl_2col {
+  a {
+    
+  }
+  &_ttl {
+    color: white;
+  }
+}
+
+/*	サービス  */
 .bl_service {
-  z-index: 100;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   padding: 0 10% 10%;
   &_img {
-    background-color: aqua;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 50%;
     padding: 5%;
-    img {
-      object-fit: cover;
-    }
-    &_mid {
-      margin-top: 10%;
-    }
-    &_btm {
-      margin-bottom: 20%;
+    &_item {
+      width: calc(100% / 3);
+      min-width: 100px;
+      img {
+        width: 100%;
+      }
+      &:nth-child(2) {
+        padding-top: 10%;
+      }
+      &:nth-child(3) {
+        padding-bottom: 20%;
+      }
     }
   }
   &_cont {
-    background-color: antiquewhite;
     width: 50%;
     padding: 5%;
     &_cat {
-      color: #cecece;
+      color: #97acaf;
       margin-bottom: 1.4em;
     }
     &_ttl {
@@ -103,14 +142,95 @@
   }
 }
 
-// ニュース
+/*	ニュース	*/
 .bl_news {
-  background-color: #F1F5F9;
-  z-index: 200;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10%;
+  &_ttl {
+    width: 400px;
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  &_list {
+    width: calc(100% - 460px);
+  }
+  &_item {
+    position: relative;
+    &:first-of-type {
+      border-top: 1px solid #dddddd;
+    }
+    a {
+      position: relative;
+      border-bottom: 1px solid #dddddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 0;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 0;
+        transition: v.$transition;
+        background-color: v.$first;
+      }
+      &:hover {
+        opacity: .7;
+        .bl_news_item_arrow {
+          transform: translateX(10px);
+        }
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    &_info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    &_time {
+      color: #b5b5b5;
+      font-size: .7rem;
+      margin-right: 15px;
+    }
+    &_cat {
+      padding: 5px 10px;
+      margin-right: 5px;
+      font-size: .7rem;
+      border: 1px solid currentColor;
+      color: v.$first;
+    }
+    &_arrow {
+      color: #b5b5b5;
+      transition: v.$transition;
+    }
+  }
+}
+.bl_news_item_cat__red {
+  color: red;
 }
 
+/*	アバウト	*/
+.bl_about a {
+  background-image: url("../../src/img/office-730681_1920.jpg");
+}
+.bl_recruit a {
+  background-image: url("../../src/img/people-1979261_1920.jpg");
+}
 
+/*	コンタクトフォーム	*/
 .bl_contact {
-  background-color: #F1F5F9;
-  z-index: 400;
+  background-color: #69d16c;
 }

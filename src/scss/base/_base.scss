@@ -1,6 +1,20 @@
 @use "../setting/variables" as v;
 @use "../mixin/mixin" as m;
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  text-size-adjust: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
 a, p {
   font-size: 14px;
 }
